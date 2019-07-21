@@ -14,13 +14,12 @@ public class MoveScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        movement = new Vector2(speed.x * direction.x, speed.y * direction.y);
+        movement = new Vector2(speed.x  * direction.x, speed.y  * direction.y);
     }
 
     private void FixedUpdate()

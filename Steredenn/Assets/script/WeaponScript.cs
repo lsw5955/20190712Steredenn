@@ -32,24 +32,24 @@ public class WeaponScript : MonoBehaviour
         if(CanAttack)
         {
             shootCooldown = shootingRate;
-        }
 
-        var shotTransform = Instantiate(shotPrefab) as Transform;
+            var shotTransform = Instantiate(shotPrefab) as Transform;
 
-        shotTransform.position = transform.position;
+            shotTransform.position = transform.position;
 
-        ShotScript shot = shotTransform.gameObject.GetComponent<ShotScript>();
+            ShotScript shot = shotTransform.gameObject.GetComponent<ShotScript>();
 
-        if(shot != null)
-        {
-            shot.isEnemyShot = isEnemy;
-        }
+            if(shot != null)
+            {
+                shot.isEnemyShot = isEnemy;
+            }
 
-        MoveScript move = shotTransform.gameObject.GetComponent<MoveScript>();
+            MoveScript move = shotTransform.gameObject.GetComponent<MoveScript>();
 
-        if(move != null)
-        {
-            move.direction = this.transform.right;
+            if(move != null)
+            {
+                move.direction = this.transform.right;
+            }
         }
     }
 
